@@ -1,12 +1,12 @@
 package Implementacion;
 
-public class NodeClave {
+public class NodeClaveDiccionarioMultipleDinamico {
 
     private int clave;
-    private NodeValor primero; // cabeza de la lista de valores para esta clave
-    private NodeClave next;
+    private NodeValorDiccionarioMultipleDinamico primero; // cabeza de la lista de valores para esta clave
+    private NodeClaveDiccionarioMultipleDinamico next;
 
-    public NodeClave(int clave, NodeValor primero, NodeClave next) {
+    public NodeClaveDiccionarioMultipleDinamico(int clave, NodeValorDiccionarioMultipleDinamico primero, NodeClaveDiccionarioMultipleDinamico next) {
         this.clave = clave;
         this.primero = primero;
         this.next = next;
@@ -20,19 +20,19 @@ public class NodeClave {
         this.clave = clave;
     }
 
-    public NodeValor getPrimero() {
+    public NodeValorDiccionarioMultipleDinamico getPrimero() {
         return primero;
     }
 
-    public void setPrimero(NodeValor primero) {
+    public void setPrimero(NodeValorDiccionarioMultipleDinamico primero) {
         this.primero = primero;
     }
 
-    public NodeClave getNext() {
+    public NodeClaveDiccionarioMultipleDinamico getNext() {
         return next;
     }
 
-    public void setNext(NodeClave next) {
+    public void setNext(NodeClaveDiccionarioMultipleDinamico next) {
         this.next = next;
     }
 }

@@ -1,11 +1,11 @@
 package Implementacion;
 
-public class NodeValor {
+public class NodeValorDiccionarioMultipleDinamico {
 
     private int valor;
-    private NodeValor next;
+    private NodeValorDiccionarioMultipleDinamico next;
 
-    public NodeValor(int valor, NodeValor next) {
+    public NodeValorDiccionarioMultipleDinamico(int valor, NodeValorDiccionarioMultipleDinamico next) {
         this.valor = valor;
         this.next = next;
     }
@@ -18,11 +18,11 @@ public class NodeValor {
         this.valor = valor;
     }
 
-    public NodeValor getNext() {
+    public NodeValorDiccionarioMultipleDinamico getNext() {
         return next;
     }
 
-    public void setNext(NodeValor next) {
+    public void setNext(NodeValorDiccionarioMultipleDinamico next) {
         this.next = next;
     }
 }

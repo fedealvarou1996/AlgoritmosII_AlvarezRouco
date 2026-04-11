@@ -5,7 +5,7 @@ import Interface.DiccionarioMultipleTDA;
 public class DiccionarioMultipleDinamico implements DiccionarioMultipleTDA {
 
     // Lista enlazada de claves; cada clave apunta a su propia lista de valores.
-    private NodeClave cabeza;
+    private NodeClaveDiccionarioMultipleDinamico cabeza;
 
     @Override
     public void InicializarDiccionario() {
@@ -14,27 +14,27 @@ public class DiccionarioMultipleDinamico implements DiccionarioMultipleTDA {
 
     @Override
     public void Agregar(int clave, int valor) {
-        NodeClave nodoClave = buscarClave(clave);
+        NodeClaveDiccionarioMultipleDinamico nodoClave = buscarClave(clave);
 
         if (nodoClave == null) {
             // Clave nueva: crear nodo de clave con un primer valor.
-            NodeValor nodoValor = new NodeValor(valor, null);
-            cabeza = new NodeClave(clave, nodoValor, cabeza);
+            NodeValorDiccionarioMultipleDinamico nodoValor = new NodeValorDiccionarioMultipleDinamico(valor, null);
+            cabeza = new NodeClaveDiccionarioMultipleDinamico(clave, nodoValor, cabeza);
         } else {
             // Clave existente: agregar valor solo si no está repetido.
             if (!existeValor(nodoClave, valor)) {
-                nodoClave.setPrimero(new NodeValor(valor, nodoClave.getPrimero()));
+                nodoClave.setPrimero(new NodeValorDiccionarioMultipleDinamico(valor, nodoClave.getPrimero()));
             }
         }
     }
 
     @Override
     public void EliminarValor(int clave, int valor) {
-        NodeClave nodoClave = buscarClave(clave);
+        NodeClaveDiccionarioMultipleDinamico nodoClave = buscarClave(clave);
         if (nodoClave == null) return;
 
-        NodeValor curr = nodoClave.getPrimero();
-        NodeValor prev = null;
+        NodeValorDiccionarioMultipleDinamico curr = nodoClave.getPrimero();
+        NodeValorDiccionarioMultipleDinamico prev = null;
 
         while (curr != null && curr.getValor() != valor) {
             prev = curr;
@@ -57,8 +57,8 @@ public class DiccionarioMultipleDinamico implements DiccionarioMultipleTDA {
 
     @Override
     public void Eliminar(int clave) {
-        NodeClave curr = cabeza;
-        NodeClave prev = null;
+        NodeClaveDiccionarioMultipleDinamico curr = cabeza;
+        NodeClaveDiccionarioMultipleDinamico prev = null;
 
         while (curr != null && curr.getClave() != clave) {
             prev = curr;
@@ -76,11 +76,11 @@ public class DiccionarioMultipleDinamico implements DiccionarioMultipleTDA {
 
     @Override
     public int[] Recuperar(int clave) {
-        NodeClave nodoClave = buscarClave(clave);
+        NodeClaveDiccionarioMultipleDinamico nodoClave = buscarClave(clave);
         if (nodoClave == null) return new int[0];
 
         int count = 0;
-        NodeValor curr = nodoClave.getPrimero();
+        NodeValorDiccionarioMultipleDinamico curr = nodoClave.getPrimero();
         while (curr != null) {
             count++;
             curr = curr.getNext();
@@ -98,7 +98,7 @@ public class DiccionarioMultipleDinamico implements DiccionarioMultipleTDA {
     @Override
     public int[] Claves() {
         int count = 0;
-        NodeClave curr = cabeza;
+        NodeClaveDiccionarioMultipleDinamico curr = cabeza;
         while (curr != null) {
             count++;
             curr = curr.getNext();
@@ -113,16 +113,16 @@ public class DiccionarioMultipleDinamico implements DiccionarioMultipleTDA {
         return result;
     }
 
-    private NodeClave buscarClave(int clave) {
-        NodeClave curr = cabeza;
+    private NodeClaveDiccionarioMultipleDinamico buscarClave(int clave) {
+        NodeClaveDiccionarioMultipleDinamico curr = cabeza;
         while (curr != null && curr.getClave() != clave) {
             curr = curr.getNext();
         }
         return curr;
     }
 
-    private boolean existeValor(NodeClave nodoClave, int valor) {
-        NodeValor curr = nodoClave.getPrimero();
+    private boolean existeValor(NodeClaveDiccionarioMultipleDinamico nodoClave, int valor) {
+        NodeValorDiccionarioMultipleDinamico curr = nodoClave.getPrimero();
         while (curr != null) {
             if (curr.getValor() == valor) return true;
             curr = curr.getNext();
