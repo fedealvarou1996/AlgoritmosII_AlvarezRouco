@@ -1,9 +1,9 @@
 package Ejercicios;
 
 import Implementacion.PilaDinamica;
-import Interfaces.PilaTDA;
+import Interface.PilaTDA;
 
-public class EjerciciosPilasDinamicas_Main {
+public class EjerciciosProfesorPilasDinamicas_Main {
     public static void main(String[] args) {
 
         PilaTDA pila = new PilaDinamica();

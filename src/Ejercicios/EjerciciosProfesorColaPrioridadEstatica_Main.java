@@ -3,7 +3,7 @@ package Ejercicios;
 import Implementacion.ColaPrioridadEstatica;
 import Interface.ColaPrioridadTDA;
 
-public class EjerciciosColaPrioridadEstatica_Main {
+public class EjerciciosProfesorColaPrioridadEstatica_Main {
     public static void main(String[] args) {
         ColaPrioridadTDA cola = new ColaPrioridadEstatica();
 

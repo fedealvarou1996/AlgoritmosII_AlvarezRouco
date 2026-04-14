@@ -1,11 +1,11 @@
 package Ejercicios;
 
-import Implementacion.DiccionarioMultipleDinamico;
+import Implementacion.DiccionarioMultipleEstatico;
 import Interface.DiccionarioMultipleTDA;
 
-public class EjerciciosDiccionarioMultipleDinamico_Main {
+public class EjerciciosProfesorDiccionarioMultipleEstatico_Main {
     public static void main(String[] args) {
-        DiccionarioMultipleTDA d = new DiccionarioMultipleDinamico();
+        DiccionarioMultipleTDA d = new DiccionarioMultipleEstatico();
 
         d.InicializarDiccionario();
 

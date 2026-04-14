@@ -1,4 +1,4 @@
-package Interfaces;
+package Interface;
 
 public interface PilaTDAStrings {
     void InicializarPila();

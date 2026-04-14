@@ -1,10 +1,10 @@
 package Ejercicios;
 
 import Implementacion.Estrategia_1_String_PilasEstaticas;
-import Interfaces.PilaTDA;
-import Interfaces.PilaTDAStrings;
+import Interface.PilaTDA;
+import Interface.PilaTDAStrings;
 
-public class EjerciciosPilasEstaticas_Main {
+public class EjerciciosProfesorPilasEstaticas_Main {
     public static void main(String[] args) {
 /*
         PilaTDA p1 = new Estrategia_1();

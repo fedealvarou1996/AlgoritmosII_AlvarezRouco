@@ -1,11 +1,11 @@
 package Ejercicios;
 
-import Implementacion.ColaEstatica;
-import Interfaces.ColaTDA;
+import Implementacion.ColaDinamica;
+import Interface.ColaTDA;
 
-public class EjerciciosColasEstaticas_Main {
+public class EjerciciosProfesorColaDinamica_Main {
     public static void main(String[] args) {
-        ColaTDA cola = new ColaEstatica();
+        ColaTDA cola = new ColaDinamica();
 
         cola.InicializarCola();
 

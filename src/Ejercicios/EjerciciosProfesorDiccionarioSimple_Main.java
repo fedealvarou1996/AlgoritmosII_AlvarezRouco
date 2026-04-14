@@ -1,11 +1,11 @@
 package Ejercicios;
 
-import Implementacion.DiccionarioSimpleDinamico;
+import Implementacion.DiccionarioSimpleEstatico;
 import Interface.DiccionarioSimpleTDA;
 
-public class EjerciciosDiccionarioSimpleDinamico_Main {
+public class EjerciciosProfesorDiccionarioSimple_Main {
     public static void main(String[] args) {
-        DiccionarioSimpleTDA d = new DiccionarioSimpleDinamico();
+        DiccionarioSimpleTDA d = new DiccionarioSimpleEstatico();
 
         d.InicializarDiccionario();
 

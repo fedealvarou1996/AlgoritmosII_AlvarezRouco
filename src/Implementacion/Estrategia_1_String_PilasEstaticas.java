@@ -1,6 +1,6 @@
 package Implementacion;
 
-import Interfaces.PilaTDAStrings;
+import Interface.PilaTDAStrings;
 
 public class Estrategia_1_String_PilasEstaticas implements PilaTDAStrings {
 

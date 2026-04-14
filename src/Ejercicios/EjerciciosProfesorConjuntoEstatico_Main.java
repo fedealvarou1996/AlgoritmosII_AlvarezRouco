@@ -1,11 +1,13 @@
 package Ejercicios;
 
-import Implementacion.ConjuntoDinamico;
+import Implementacion.ConjuntoEstatico;
 import Interface.ConjuntoTDA;
 
-public class EjerciciosConjuntoDinamico_Main {
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class EjerciciosProfesorConjuntoEstatico_Main {
     public static void main(String[] args) {
-        ConjuntoTDA c = new ConjuntoDinamico();
+        ConjuntoTDA c = new ConjuntoEstatico();
 
         c.InicializarConjunto();
 

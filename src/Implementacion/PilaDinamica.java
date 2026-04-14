@@ -1,6 +1,6 @@
 package Implementacion;
 
-import Interfaces.PilaTDA;
+import Interface.PilaTDA;
 
 public class PilaDinamica implements PilaTDA {
 
